@@ -34,9 +34,9 @@ x = width / 2;
   textAlign(CENTER, CENTER);
   textSize(wordSize);
   
-  rectW = 150;
-  rectH = 50;
-  rectX = width - rectW - 1200;
+  rectW = 300;
+  rectH = 100;
+  rectX = width - rectW - 1000;
   rectY = height / 2 - rectH / 2;
   
 }
@@ -91,14 +91,15 @@ function draw() {
     ellipse(xLoc[i], yLoc[i], d*diameter)
   }
   
-   fill(0, 0, 255, 150);
+   fill(255, 171, 249);
   stroke(255);
   rect(rectX, rectY, rectW, rectH, 10);
   fill(255);
   noStroke();
   textSize(20);
   textAlign(CENTER, CENTER);
-  text("Go to URL", rectX + rectW / 2, rectY + rectH / 2);
+  text("KITTY CHASES CIRCLES", rectX + rectW / 2, rectY + rectH / 2);
+  textFont('Times New Roman')
 }
 
 
