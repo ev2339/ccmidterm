@@ -2,7 +2,7 @@ let rotations = 0
 
   
 
-let wordSize = 100;
+let wordSize = 200;
 let x, y;
 let xVel = 10;
 let yVel = 7;
@@ -12,6 +12,9 @@ let yVel = 7;
 let numSegments = 100;
 
 let diameter =100;
+
+let rectX, rectY, rectW, rectH;
+let url = "https://www.google.com";
 
 
 function setup() {
@@ -30,6 +33,11 @@ x = width / 2;
 
   textAlign(CENTER, CENTER);
   textSize(wordSize);
+  
+  rectW = 150;
+  rectH = 50;
+  rectX = width - rectW - 1200;
+  rectY = height / 2 - rectH / 2;
   
 }
 
@@ -82,13 +90,29 @@ function draw() {
     stroke(r, 0,b)
     ellipse(xLoc[i], yLoc[i], d*diameter)
   }
-
+  
+   fill(0, 0, 255, 150);
+  stroke(255);
+  rect(rectX, rectY, rectW, rectH, 10);
+  fill(255);
+  noStroke();
+  textSize(20);
+  textAlign(CENTER, CENTER);
+  text("Go to URL", rectX + rectW / 2, rectY + rectH / 2);
 }
+
 
 function mousePressed(){
-  print(xLoc)
+
+  if (mouseX > rectX && mouseX < rectX + rectW &&
+      mouseY > rectY && mouseY < rectY + rectH) {
+    window.open(url, "_blank");
 
 }
+  
+  print(xLoc)
+}
+
 
 function firstDesign(){
 
