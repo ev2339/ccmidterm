@@ -14,7 +14,7 @@ let numSegments = 100;
 let diameter =100;
 
 let rectX, rectY, rectW, rectH;
-let url = "https://www.google.com";
+let url = "https://ev2339.github.io/kittychasescircles/";
 
 
 function setup() {
