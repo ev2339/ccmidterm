@@ -40,7 +40,7 @@ x = width / 2;
   
   rectW = 300;
   rectH = 100;
-  rectX = width - rectW - 1000;
+  rectX = width / 8 ;
   rectY = height / 2 - rectH / 2;
   
   
@@ -48,15 +48,15 @@ x = width / 2;
   textSize(wordSize);
   rect2W = 300; 
   rect2H = 100; 
-  rect2X = width - rectW - 1000;
-  rect2Y = height / 3 - rectH / 3;
+  rect2X = width  / 8 ;
+  rect2Y = height / 2 + rectH / 2 + 20 ;
   
   textAlign(CENTER, CENTER);
   textSize(wordSize);
   rect3W = 300; 
   rect3H = 100; 
-  rect3X = width - rectW - 1000;
-  rect3Y = height / 6 - rectH / 6;
+  rect3X = width / 8 ;
+  rect3Y = height / 2 + rectH + 40;
 }
 
 function draw() {
@@ -89,7 +89,7 @@ function draw() {
   yLoc[numSegments - 1] = mouseY;
   
   
-  for(let i = 0; i<numSegments; i++){
+  for(let i = 0; i<numSegments - 3 ; i++){
     xLoc[i] = xLoc[i+3]
     yLoc[i] = yLoc[i+3]
     
