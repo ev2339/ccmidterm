@@ -56,7 +56,7 @@ x = width / 2;
   rect3W = 300; 
   rect3H = 100; 
   rect3X = width / 8 ;
-  rect3Y = height / 2 + rectH + 100;
+  rect3Y = rect2Y + rect2H + 40;
 }
 
 function draw() {
