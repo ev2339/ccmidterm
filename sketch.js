@@ -15,8 +15,10 @@ let diameter =100;
 
 let rectX, rectY, rectW, rectH;
 let rect2X , rect2Y , rect2W , rect2H;
+let rect3X , rect3Y, rect3W , rect3H ; 
 let url = "https://ev2339.github.io/kittychasescircles/";
 let music = "https://ev2339.github.io/rodentfriends/"
+let spag = 'https://ev2339.github.io/rodentspaghetti/'
 
 
 function setup() {
@@ -49,6 +51,12 @@ x = width / 2;
   rect2X = width - rectW - 1000;
   rect2Y = height / 3 - rectH / 3;
   
+  textAlign(CENTER, CENTER);
+  textSize(wordSize);
+  rect3W = 300; 
+  rect3H = 100; 
+  rect3X = width - rectW - 1000;
+  rect3Y = height / 6 - rectH / 6;
 }
 
 function draw() {
@@ -120,6 +128,16 @@ function draw() {
   textAlign(CENTER, CENTER);
   textFont('Times New Roman');
   text("RODENT FRIENDS", rect2X + rect2W / 2, rect2Y + rect2H / 2);
+  
+  fill(255, 171, 249);
+  stroke(255);
+  rect(rect3X, rect3Y, rect3W, rect3H, 10);
+  fill(255);
+  noStroke();
+  textSize(20);
+  textAlign(CENTER, CENTER);
+  textFont('Times New Roman');
+  text("RODENT SPAGHETTI", rect3X + rect3W / 2, rect3Y + rect3H / 2);
 }
 
 
@@ -134,6 +152,12 @@ function mousePressed(){
    if (mouseX > rect2X && mouseX < rect2X + rect2W &&
       mouseY > rect2Y && mouseY < rect2Y + rect2H) {
     window.open(music, "_blank");
+
+}
+  
+   if (mouseX > rect3X && mouseX < rect3X + rect3W &&
+      mouseY > rect3Y && mouseY < rect3Y + rect3H) {
+    window.open(spag, "_blank");
 
 }
   
