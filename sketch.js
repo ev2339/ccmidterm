@@ -41,18 +41,13 @@ x = width / 2;
   rectW = 300;
   rectH = 100;
   rectX = width / 8 ;
-  rectY = height / 2 - rectH / 2;
+  rectY = height / 2 - rectH - 20;
   
-  
-    textAlign(CENTER, CENTER);
-  textSize(wordSize);
   rect2W = 300; 
   rect2H = 100; 
   rect2X = width  / 8 ;
-  rect2Y = height / 2 + rectH / 2 + 20 ;
-  
-  textAlign(CENTER, CENTER);
-  textSize(wordSize);
+  rect2Y = rectY+ rectH +40;
+
   rect3W = 300; 
   rect3H = 100; 
   rect3X = width / 8 ;
@@ -109,35 +104,22 @@ function draw() {
     ellipse(xLoc[i], yLoc[i], d*diameter)
   }
   
-   fill(255, 171, 249);
-  stroke(255);
-  rect(rectX, rectY, rectW, rectH, 10);
-  fill(255);
-  noStroke();
-  textSize(20);
-  textAlign(CENTER, CENTER);
-  text("KITTY CHASES CIRCLES", rectX + rectW / 2, rectY + rectH / 2);
-  textFont('Times New Roman')
-  
-    fill(255, 171, 249);
-  stroke(255);
-  rect(rect2X, rect2Y, rect2W, rect2H, 10);
-  fill(255);
-  noStroke();
-  textSize(20);
-  textAlign(CENTER, CENTER);
-  textFont('Times New Roman');
-  text("RODENT FRIENDS", rect2X + rect2W / 2, rect2Y + rect2H / 2);
-  
+    drawButton(rectX, rectY, rectW, rectH, "KITTY CHASES CIRCLES");
+  drawButton(rect2X, rect2Y, rect2W, rect2H, "RODENT FRIENDS");
+  drawButton(rect3X, rect3Y, rect3W, rect3H, "RODENT SPAGHETTI");
+}
+
+function drawButton(x, y, w, h, label) {
   fill(255, 171, 249);
   stroke(255);
-  rect(rect3X, rect3Y, rect3W, rect3H, 10);
+  rect(x, y, w, h, 10);
   fill(255);
   noStroke();
   textSize(20);
-  textAlign(CENTER, CENTER);
   textFont('Times New Roman');
-  text("RODENT SPAGHETTI", rect3X + rect3W / 2, rect3Y + rect3H / 2);
+  textAlign(CENTER, CENTER);
+  text(label, x + w / 2, y + h / 2);
+
 }
 
 
